@@ -1,0 +1,234 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind v4 */
+@import "tailwindcss";
+
+/* ------------------------------ */
+/* THEME (so bg-background, etc.) */
+/* ------------------------------ */
+@theme {
+  /* fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, "Times New Roman", serif;
+
+  /* map CSS vars → Tailwind colors */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  /* radius (used by Tailwind rounded-lg/xl if you want) */
+  --radius-lg: 0.75rem;
+}
+
+/* ------------------------------ */
+/* CSS VARIABLES (design system)  */
+/* ------------------------------ */
+
+:root {
+  /* Premium Soothing Color Palette */
+  --background: 40 43% 98%; /* Off-White #FAF8F4 */
+  --foreground: 160 65% 14%; /* Deep Forest Green #0D3B2E */
+
+  --card: 0 0% 100%;
+  --card-foreground: 160 65% 14%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 160 65% 14%;
+
+  --primary: 160 65% 14%; /* Deep Forest Green */
+  --primary-foreground: 40 43% 98%;
+
+  --secondary: 110 23% 70%; /* Sage Green #A7C4A0 */
+  --secondary-foreground: 160 65% 14%;
+
+  --muted: 38 36% 87%; /* Almond Beige #EADFCB */
+  --muted-foreground: 160 40% 30%;
+
+  --accent: 40 44% 60%; /* Soft Gold #C9A86A */
+  --accent-foreground: 40 43% 98%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 40 43% 98%;
+
+  --border: 38 36% 87%;
+  --input: 38 25% 90%;
+  --ring: 160 65% 14%;
+
+  --radius: 0.75rem;
+
+  /* Custom Premium Colors */
+  --forest-green: 160 65% 14%;
+  --sage-green: 110 23% 70%;
+  --almond-beige: 38 36% 87%;
+  --soft-gold: 40 44% 60%;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(160 65% 14% / 0.95) 0%,
+    hsl(160 50% 20% / 0.9) 100%
+  );
+  --gradient-gold: linear-gradient(
+    135deg,
+    hsl(40 44% 60%) 0%,
+    hsl(40 50% 70%) 100%
+  );
+
+  /* Shadows */
+  --shadow-premium: 0 10px 40px -10px hsl(160 65% 14% / 0.15);
+  --shadow-card: 0 4px 20px -2px hsl(160 65% 14% / 0.08);
+  --shadow-hover: 0 20px 60px -15px hsl(160 65% 14% / 0.2);
+
+  /* Animations */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-premium: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Dark mode variables (optional – only used if you add .dark on html/body) */
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+/* ------------------------------ */
+/* BASE ELEMENT STYLES            */
+/* ------------------------------ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* headings use Playfair */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+/* ------------------------------ */
+/* CUSTOM UTILITY CLASSES         */
+/* (no @apply, just normal CSS)   */
+/* ------------------------------ */
+
+.premium-card {
+  background-color: hsl(var(--card));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-premium);
+}
+
+.premium-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.gold-border {
+  border: 2px solid hsl(var(--accent));
+  border-radius: 0.75rem;
+}
+
+.text-gradient-gold {
+  background-image: linear-gradient(
+    90deg,
+    hsl(40 44% 60%),
+    hsl(40 50% 70%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-premium {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: var(--transition-premium);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-premium:hover {
+  box-shadow: var(--shadow-premium);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-gold {
+  background-color: hsl(var(--accent));
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: var(--transition-premium);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-gold:hover {
+  box-shadow: var(--shadow-premium);
+  transform: translateY(-2px) scale(1.02);
+}
