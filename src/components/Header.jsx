@@ -10,7 +10,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "Products", path: "/products" },
     { name: "About Us", path: "/about" },
-    { name: "Certificates", path: "/certificates" },
+    { name: "What We Offer", path: "/certificates" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -35,7 +35,7 @@ const Header = () => {
                 Vaibhav Industries
               </h1>
               <p className="text-xs text-muted-foreground">
-                Exporting Quality Since Years
+                Exporting Quality 
               </p>
             </div>
           </Link>

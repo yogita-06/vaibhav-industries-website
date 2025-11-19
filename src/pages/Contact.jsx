@@ -51,12 +51,12 @@ const Contact = () => {
                       </p>
                       <p className="text-sm md:text-base">
                         <a
-                          href="https://mail.google.com/mail/?view=cm&fs=1&to=vaibhavindustries2000@gmail.com"
+                          href="https://mail.google.com/mail/?view=cm&fs=1&to=info@vaibhavindus.com"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="underline hover:text-accent transition"
                         >
-                          vaibhavindustries2000@gmail.com
+                          info@vaibhavindus.com
                         </a>
                       </p>
                     </div>
@@ -140,12 +140,12 @@ const Contact = () => {
                 <div className="flex items-center justify-center gap-3 pt-2">
                   <Mail className="h-6 w-6 text-accent" />
                   <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=vaibhavindustries2000@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@vaibhavindus.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg underline hover:text-accent transition"
                   >
-                    vaibhavindustries2000@gmail.com
+                    info@vaibhavindus.com
                   </a>
                 </div>
 

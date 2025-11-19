@@ -33,7 +33,7 @@ const Footer = () => {
                 About Us
               </Link>
               <Link to="/certificates" className="text-sm text-foreground/70 hover:text-primary transition-colors">
-                Certificates
+                What We Offer
               </Link>
               <Link to="/contact" className="text-sm text-foreground/70 hover:text-primary transition-colors">
                 Contact

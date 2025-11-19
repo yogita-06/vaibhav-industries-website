@@ -10,7 +10,6 @@ import {
   Package,
   Clock,
   Shield,
-  Users,
 } from "lucide-react";
 
 import { Button } from "../components/ui/button";
@@ -44,39 +43,6 @@ const Home = () => {
     { icon: Shield, text: "Ethical Sourcing" },
     { icon: Package, text: "Multi-Stage Quality Checks" },
     { icon: Clock, text: "On-Time Global Delivery" },
-  ];
-
-  const services = [
-    {
-      icon: Globe,
-      title: "Global Export Services",
-      description:
-        "Seamless export operations to markets worldwide with complete documentation support.",
-    },
-    {
-      icon: Package,
-      title: "Private Label & OEM Packaging",
-      description:
-        "Customized packaging solutions tailored to your brand requirements.",
-    },
-    {
-      icon: Clock,
-      title: "Timely & Safe Delivery",
-      description:
-        "Reliable logistics ensuring your products reach on time, every time.",
-    },
-    {
-      icon: Shield,
-      title: "Stringent Quality Control",
-      description:
-        "Multi-stage quality checks ensuring only the finest products are exported.",
-    },
-    {
-      icon: Users,
-      title: "Long-Term Partnerships",
-      description:
-        "Building lasting relationships based on trust, quality, and consistency.",
-    },
   ];
 
   return (
@@ -190,32 +156,83 @@ const Home = () => {
         </div>
       </section>
 
-      {/* What We Offer */}
+      {/* Featured Products / Image Gallery */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What We Offer
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
+              Premium Agro Products from India
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive export solutions tailored to your business needs
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-3">
+              A curated selection of high-quality, export-ready products trusted by
+              global buyers.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="premium-card p-8 text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6 group-hover:bg-accent/20 transition-colors duration-300">
-                  <service.icon className="h-8 w-8 text-accent" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Makhana */}
+            <div className="rounded-2xl overflow-hidden shadow-xl group bg-card">
+              <div className="overflow-hidden">
+                <img
+                  src={makhanaImg}
+                  alt="Makhana"
+                  className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
-            ))}
+              <div className="p-5 text-center">
+                <h3 className="font-serif text-xl font-semibold text-foreground">
+                  Premium Makhana
+                </h3>
+              </div>
+            </div>
+
+            {/* Cardamom */}
+            <div className="rounded-2xl overflow-hidden shadow-xl group bg-card">
+              <div className="overflow-hidden">
+                <img
+                  src={cardamomImg}
+                  alt="Cardamom"
+                  className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-serif text-xl font-semibold text-foreground">
+                  Green Cardamom
+                </h3>
+              </div>
+            </div>
+
+            {/* Cumin */}
+            <div className="rounded-2xl overflow-hidden shadow-xl group bg-card">
+              <div className="overflow-hidden">
+                <img
+                  src={cuminImg}
+                  alt="Cumin"
+                  className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-serif text-xl font-semibold text-foreground">
+                  Cumin Seeds (Jeera)
+                </h3>
+              </div>
+            </div>
+
+            {/* Sesame */}
+            <div className="rounded-2xl overflow-hidden shadow-xl group bg-card">
+              <div className="overflow-hidden">
+                <img
+                  src={sesameImg}
+                  alt="Sesame"
+                  className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-serif text-xl font-semibold text-foreground">
+                  Sesame Seeds
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
       </section>
