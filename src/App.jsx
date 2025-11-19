@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Products from "./pages/Product";
-import About from "./pages/About";
+import About from "./pages/about";
 import Certificates from "./pages/Certificates";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
